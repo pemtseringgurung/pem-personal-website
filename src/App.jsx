@@ -1,23 +1,18 @@
-import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="bg-blue-500 p-4 text-white text-center">
-        <h1 className="text-3xl font-bold">Welcome to My Portfolio</h1>
-      </header>
-      <main className="p-8">
-        <h2 className="text-2xl">Projects</h2>
-        {/* Add your project details here */}
-      </main>
+    <div className="App bg-background text-text">
+      <Navbar />
+      <Hero />
+      <Experience />
+      <Projects />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
