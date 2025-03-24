@@ -32,9 +32,10 @@ const Hero = () => {
               </h2>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-                <span className="block mb-1"> <span className="text-gradient">PEM TSERING GURUNG</span></span>
+                <span className="block mb-1"><span className="text-gradient">PEM TSERING</span></span>
+                <span className="block mb-1"><span className="text-gradient">GURUNG</span></span>
                 <span className="block text-3xl sm:text-4xl font-light text-gray-700 dark:text-gray-300">
-                  Software Engineer
+                  Software Engineer & Student
                 </span>
               </h1>
 
@@ -42,53 +43,30 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-4 text-base text-gray-600 dark:text-gray-400 max-w-lg"
+                className="mt-6 text-base text-gray-600 dark:text-gray-400 max-w-lg"
               >
-                <p className="mb-4">
-                  I am a junior majoring in Computer Science at the College of Wooster.  
-                  I specialize in building full-stack applications and creating beautiful and easily usable interfaces.
+                <p className="mb-5">
+                  I am currently a junior at the College of Wooster majoring in Computer Science. I am an aspiring software engineer and I am very passionate about building full-stack applications!
                 </p>
                 
-                <h3 className="text-lg font-bold mb-3 text-black dark:text-white">My Tech Stack</h3>
-                
-                <div className="space-y-3">
-                  <div className="p-3 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
-                    <h4 className="text-black dark:text-white font-medium mb-2 uppercase tracking-wider text-xs">Languages & Frameworks</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'React', 'Node.js', 'Next.js', 'TypeScript', 'Flask', 'Django'].map((tech, i) => (
-                        <span key={i} className="px-2 py-1 border border-gray-200 dark:border-gray-700 text-xs text-gray-800 dark:text-gray-200 hover:border-black dark:hover:border-white transition-colors">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold mb-4 text-black dark:text-white inline-block relative">
+                    Tech Stack
+                    <span className="absolute w-12 h-0.5 bg-black dark:bg-white bottom-[-6px] left-0"></span>
+                  </h3>
                   
-                  <div className="p-3 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
-                    <h4 className="text-black dark:text-white font-medium mb-2 uppercase tracking-wider text-xs">Libraries & Tools</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {['PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'MongoDB', 'Google Colab', 'Miro', 'HTML', 'CSS'].map((tech, i) => (
-                        <span key={i} className="px-2 py-1 border border-gray-200 dark:border-gray-700 text-xs text-gray-800 dark:text-gray-200 hover:border-black dark:hover:border-white transition-colors">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="p-3 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
-                    <h4 className="text-black dark:text-white font-medium mb-2 uppercase tracking-wider text-xs">Cloud & Infrastructure</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {['AWS', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
-                        <span key={i} className="px-2 py-1 border border-gray-200 dark:border-gray-700 text-xs text-gray-800 dark:text-gray-200 hover:border-black dark:hover:border-white transition-colors">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="mt-5 flex flex-wrap gap-2.5">
+                    {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'TypeScript', 'React', 'Node.js', 'Next.js', 'Flask', 'Django', 'PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'MongoDB', 'HTML', 'CSS', 'AWS', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
+                      <span key={i} className="px-3 py-1.5 text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:shadow-md transition-shadow duration-200 inline-block">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
 
-              {/* Combined action buttons and social icons row */}
-              <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+              {/* Action button and social icons in separate rows */}
+              <div className="mt-8 flex flex-col gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -96,7 +74,7 @@ const Hero = () => {
                 >
                   <a 
                     href="#projects" 
-                    className="px-6 py-2 rounded-none bg-black text-white dark:bg-white dark:text-black font-medium tracking-wider hover-lift inline-block"
+                    className="px-8 py-3 rounded-none bg-black text-white dark:bg-white dark:text-black font-medium tracking-wider hover-lift inline-block"
                   >
                     VIEW WORK
                   </a>
@@ -106,7 +84,7 @@ const Hero = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.5 }}
-                  className="flex space-x-5"
+                  className="flex space-x-6"
                 >
                   <motion.a
                     href="https://github.com/pemtseringgurung"
@@ -115,7 +93,7 @@ const Hero = () => {
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
                   >
-                    <FiGithub size={20} />
+                    <FiGithub size={22} />
                   </motion.a>
                   <motion.a
                     href="https://www.linkedin.com/in/pemgurung/"
@@ -124,7 +102,7 @@ const Hero = () => {
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
                   >
-                    <FiLinkedin size={20} />
+                    <FiLinkedin size={22} />
                   </motion.a>
                   <motion.a
                     href="mailto:pemgurung541@gmail.com"
@@ -133,7 +111,7 @@ const Hero = () => {
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
                   >
-                    <FiMail size={20} />
+                    <FiMail size={22} />
                   </motion.a>
                 </motion.div>
               </div>
@@ -147,7 +125,7 @@ const Hero = () => {
             className="md:w-1/2 flex justify-center md:justify-end"
           >
             <div className="relative">
-              <div className="w-56 h-56 sm:w-64 sm:h-64 relative">
+              <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 relative">
                 <div className="absolute inset-0 border-2 border-black dark:border-white">
                   <div className="w-full h-full bg-gray-100 dark:bg-gray-900 overflow-hidden">
                     <img 
