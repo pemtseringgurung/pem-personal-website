@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import fireImage from "../images/fire.png";
 import roomImage from "../images/room.png";
-import rateLowry from "../images/rateLowry.png";
+import rateLowry from "../images/ratelowry.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
