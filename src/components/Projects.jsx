@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import fireImage from "../images/fire.png";
 import roomImage from "../images/room.png";
-import rateLowry from "../images/ratelowry.png";
+import rateLowry from "../images/rateLowry.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -13,25 +13,31 @@ const Projects = () => {
       title: "Rate Lowry!",
       description: "A full-stack application for discovering and reviewing food items using Next.js and MongoDB, featuring real-time image uploads with Cloudinary and dynamic station-based filtering. Implemented with a responsive Tailwind CSS UI, including an interactive rating system and image preview functionality for seamless user experience across mobile and desktop devices.",
       image: rateLowry,
-      technologies:  ['Next.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS', 'React']
+      technologies: ['Next.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS', 'React'],
+      liveLink: "https://rate-lowry.vercel.app/",
+      repoLink: "https://github.com/pemtseringgurung/rate-lowry"
     },
     {
       title: "Fire Rescue Resource Allocator",
       description: "An interactive mapping tool for optimizing emergency response in Los Angeles by visualizing fire station locations and incidents.",
       image: fireImage,
-      technologies: ['React', 'React Router', 'Leaflet', 'React-Leaflet', 'Vite', 'CSS Modules']
+      technologies: ['React', 'React Router', 'Leaflet', 'React-Leaflet', 'Vite', 'CSS Modules'],
+      liveLink: "https://fire-rescue-resource-allocator-luk4.vercel.app/",
+      repoLink: "https://github.com/pemtseringgurung/fire-rescue-resource-allocator"
     },
     {
       title: "Pem's Room Tracking Website",
       description: "A web application for managing and tracking room availability using Vite and React. Features real-time updates and a user-friendly interface for efficient room management.",
       image: roomImage,
-      technologies: ['React', 'Vite', 'React Modal', 'ESLint']
+      technologies: ['React', 'Vite', 'React Modal', 'ESLint'],
+      liveLink: "https://pemroomtrackingwebsite.vercel.app/",
+      repoLink: "https://github.com/pemtseringgurung/pem_room_tracking_website"
     },
   ];
   
   const filteredProjects = activeFilter === 'All'
     ? projects
-    : projects.filter(project => project.tags.includes(activeFilter));
+    : projects.filter(project => project.technologies.includes(activeFilter));
 
   return (
     <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-900">
@@ -85,9 +91,7 @@ const Projects = () => {
                       <motion.a
                         whileHover={{ scale: 1.1 }}
                         className="p-2 bg-white text-black rounded-full"
-                        href={index === 0 
-                          ? "https://fire-rescue-resource-allocator-luk4.vercel.app/" 
-                          : "https://pemroomtrackingwebsite.vercel.app/"}
+                        href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -96,9 +100,7 @@ const Projects = () => {
                       <motion.a
                         whileHover={{ scale: 1.1 }}
                         className="p-2 bg-white text-black rounded-full"
-                        href={index === 0 
-                          ? "https://github.com/pemtseringgurung/fire-rescue-resource-allocator" 
-                          : "https://github.com/pemtseringgurung/pem_room_tracking_website"}
+                        href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
