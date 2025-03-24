@@ -34,7 +34,7 @@ const Hero = () => {
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight">
                 <span className="block mb-2"> <span className="text-gradient">PEM TSERING GURUNG</span></span>
                 <span className="block text-4xl sm:text-5xl font-light text-gray-700 dark:text-gray-300">
-                  Developer & Designer
+                  Software Engineer
                 </span>
               </h1>
 
@@ -44,7 +44,15 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-lg"
               >
-                I am currently a junior at the College of Wooster majoring in Computer Science. I am an aspiring software engineer and I am very passionate about building full-stack applications!
+                 I am a junior majoring in Computer Science at the College of Wooster.  
+                 I specialize in building full-stack applications and creating beautiful and easily usable interfaces.  
+                 My Tech Stack Includes:  
+                <br />
+                <strong>Languages & Frameworks:</strong> Javascript, Python, Java, C++, Kotlin, React.js, Node.js,Next.js, Typescript, Flask, Django.  
+                <br />
+                <strong>Libraries & Tools:</strong> Pytorch, TensorFlow, Git, GitHub, Jupyter Notebook, MongoDB, Google Colab, Miro, HTML, CSS.  
+                <br />
+                <strong>Cloud/Distributed System:</strong> AWS (EC2, S3), GCP, Firebase, Docker, Kubernetes.  
               </motion.p>
             </motion.div>
 

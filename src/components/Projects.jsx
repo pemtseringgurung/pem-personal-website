@@ -3,11 +3,18 @@ import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import fireImage from "../images/fire.png";
 import roomImage from "../images/room.png";
+import rateLowry from "../images/rateLowry.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   
   const projects = [
+    {
+      title: "Rate Lowry!",
+      description: "A full-stack application for discovering and reviewing food items using Next.js and MongoDB, featuring real-time image uploads with Cloudinary and dynamic station-based filtering. Implemented with a responsive Tailwind CSS UI, including an interactive rating system and image preview functionality for seamless user experience across mobile and desktop devices.",
+      image: rateLowry,
+      technologies:  ['Next.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS', 'React']
+    },
     {
       title: "Fire Rescue Resource Allocator",
       description: "An interactive mapping tool for optimizing emergency response in Los Angeles by visualizing fire station locations and incidents.",
@@ -19,7 +26,7 @@ const Projects = () => {
       description: "A web application for managing and tracking room availability using Vite and React. Features real-time updates and a user-friendly interface for efficient room management.",
       image: roomImage,
       technologies: ['React', 'Vite', 'React Modal', 'ESLint']
-    }
+    },
   ];
   
   const filteredProjects = activeFilter === 'All'
