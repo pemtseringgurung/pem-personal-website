@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import heroImage from '../images/pem.png'; // Adjust the path as needed
+import heroImage from '../images/pem.png'; 
 
 const Hero = () => {
   return (
@@ -38,22 +38,54 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-lg"
               >
-                 I am a junior majoring in Computer Science at the College of Wooster.  
-                 I specialize in building full-stack applications and creating beautiful and easily usable interfaces.  
-                 My Tech Stack Includes:  
-                <br />
-                <strong>Languages & Frameworks:</strong> Javascript, Python, Java, C++, Kotlin, React.js, Node.js,Next.js, Typescript, Flask, Django.  
-                <br />
-                <strong>Libraries & Tools:</strong> Pytorch, TensorFlow, Git, GitHub, Jupyter Notebook, MongoDB, Google Colab, Miro, HTML, CSS.  
-                <br />
-                <strong>Cloud/Distributed System:</strong> AWS (EC2, S3), GCP, Firebase, Docker, Kubernetes.  
-              </motion.p>
+                <p className="mb-5">
+                  I am a junior majoring in Computer Science at the College of Wooster.  
+                  I specialize in building full-stack applications and creating beautiful and easily usable interfaces.
+                </p>
+                
+                <h3 className="text-xl font-bold mb-4 text-black dark:text-white">My Tech Stack</h3>
+                
+                <div className="space-y-4">
+                  <div className="p-4 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
+                    <h4 className="text-black dark:text-white font-medium mb-3 uppercase tracking-wider text-sm">Languages & Frameworks</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'React', 'Node.js', 'Next.js', 'TypeScript', 'Flask', 'Django'].map((tech, i) => (
+                        <span key={i} className="px-3 py-1 border border-gray-200 dark:border-gray-700 text-sm text-gray-800 dark:text-gray-200 hover:border-black dark:hover:border-white transition-colors">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
+                    <h4 className="text-black dark:text-white font-medium mb-3 uppercase tracking-wider text-sm">Libraries & Tools</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {['PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'MongoDB', 'Google Colab', 'Miro', 'HTML', 'CSS'].map((tech, i) => (
+                        <span key={i} className="px-3 py-1 border border-gray-200 dark:border-gray-700 text-sm text-gray-800 dark:text-gray-200 hover:border-black dark:hover:border-white transition-colors">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors">
+                    <h4 className="text-black dark:text-white font-medium mb-3 uppercase tracking-wider text-sm">Cloud & Infrastructure</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {['AWS', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
+                        <span key={i} className="px-3 py-1 border border-gray-200 dark:border-gray-700 text-sm text-gray-800 dark:text-gray-200 hover:border-black dark:hover:border-white transition-colors">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
 
             <motion.div
