@@ -36,11 +36,11 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-sm dark:bg-black/90' : 'bg-transparent'
+        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm dark:bg-black/95 dark:shadow-gray-900/30' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <motion.div 
               whileHover={{ scale: 1.05 }}
@@ -62,7 +62,7 @@ const Navbar = () => {
                   key={item.name}
                   href={`#${item.id}`}
                   whileHover={{ scale: 1.05 }}
-                  className={`px-5 py-3 rounded-md text-sm tracking-widest relative overflow-hidden ${
+                  className={`px-5 py-2 rounded-md text-sm tracking-widest relative overflow-hidden ${
                     activeSection === item.id 
                       ? 'font-bold text-black dark:text-white' 
                       : 'text-gray-600 dark:text-gray-300'

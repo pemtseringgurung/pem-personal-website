@@ -5,7 +5,7 @@ import heroImage from '../images/pem.png';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden py-12">
+    <section id="home" className="pt-24 md:pt-32 pb-16 min-h-screen flex flex-col justify-center relative overflow-hidden">
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="h-full w-full" style={{
           backgroundImage: `linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)`,
@@ -86,55 +86,57 @@ const Hero = () => {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="mt-6 flex flex-wrap gap-4"
-            >
-              <a 
-                href="#projects" 
-                className="px-6 py-2 rounded-none bg-black text-white dark:bg-white dark:text-black font-medium tracking-wider hover-lift"
-              >
-                VIEW WORK
-              </a>
-            </motion.div>
+              {/* Combined action buttons and social icons row */}
+              <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                >
+                  <a 
+                    href="#projects" 
+                    className="px-6 py-2 rounded-none bg-black text-white dark:bg-white dark:text-black font-medium tracking-wider hover-lift inline-block"
+                  >
+                    VIEW WORK
+                  </a>
+                </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-              className="mt-6 flex space-x-6"
-            >
-              <motion.a
-                href="https://github.com/pemtseringgurung"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
-              >
-                <FiGithub size={20} />
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/in/pemgurung/"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
-              >
-                <FiLinkedin size={20} />
-              </motion.a>
-              <motion.a
-                href="mailto:pemgurung541@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
-              >
-                <FiMail size={20} />
-              </motion.a>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.2, duration: 0.5 }}
+                  className="flex space-x-5"
+                >
+                  <motion.a
+                    href="https://github.com/pemtseringgurung"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  >
+                    <FiGithub size={20} />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.linkedin.com/in/pemgurung/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  >
+                    <FiLinkedin size={20} />
+                  </motion.a>
+                  <motion.a
+                    href="mailto:pemgurung541@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  >
+                    <FiMail size={20} />
+                  </motion.a>
+                </motion.div>
+              </div>
             </motion.div>
           </motion.div>
 
