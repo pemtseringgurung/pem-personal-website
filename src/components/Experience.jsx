@@ -30,7 +30,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="py-24 bg-[color:var(--background)]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,8 +39,8 @@ const Experience = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="section-title">Experience</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+          <h2 className="section-title text-[color:var(--text)]">Experience</h2>
+          <p className="text-[color:var(--text-light)] max-w-2xl">
             My past professional experiences.
           </p>
         </motion.div>
@@ -71,16 +71,16 @@ const Experience = () => {
                   </div>
                 </div>
                 <div className="md:w-2/3 md:pl-12 border-l border-gray-200 dark:border-gray-800">
-                  <h3 className="text-xl font-bold mb-1">{exp.title}</h3>
-                  <h4 className="text-gray-700 dark:text-gray-300 mb-4">{exp.company}</h4>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  <h3 className="text-xl font-bold mb-1 text-[color:var(--text)]">{exp.title}</h3>
+                  <h4 className="text-[color:var(--primary)] mb-4">{exp.company}</h4>
+                  <p className="text-[color:var(--text-light)] mb-4">
                     {exp.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="inline-block px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                        className="inline-block px-3 py-1 text-xs font-medium bg-[color:var(--tag-bg)] text-[color:var(--tag-text)]"
                       >
                         {skill}
                       </span>

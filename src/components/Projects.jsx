@@ -40,7 +40,7 @@ const Projects = () => {
     : projects.filter(project => project.technologies.includes(activeFilter));
 
   return (
-    <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-24 bg-[color:var(--background)]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,8 +49,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="section-title">Projects</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+          <h2 className="section-title text-[color:var(--text)]">Projects</h2>
+          <p className="text-[color:var(--text-light)] max-w-2xl">
             A selection of my recent work. 
           </p>
         </motion.div>
@@ -79,18 +79,18 @@ const Projects = () => {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <div className="bg-white dark:bg-black overflow-hidden">
+              <div className="bg-[color:var(--background-alt)] overflow-hidden">
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/30 dark:bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[color:var(--primary)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-4">
                       <motion.a
                         whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-white text-black rounded-full"
+                        className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 rounded-full"
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const Projects = () => {
                       </motion.a>
                       <motion.a
                         whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-white text-black rounded-full"
+                        className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 rounded-full"
                         href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -111,12 +111,12 @@ const Projects = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="inline-block px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                        className="inline-block px-3 py-1 text-xs font-medium bg-gray-200 text-gray-600"
                       >
                         {tech}
                       </span>

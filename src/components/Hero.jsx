@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import heroImage from '../images/pem.png'; 
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-24 md:pt-32 pb-16 min-h-screen flex flex-col justify-center relative overflow-hidden">
+    <section id="home" className="pt-24 md:pt-32 pb-16 min-h-screen flex flex-col justify-center relative overflow-hidden bg-[color:var(--background)]">
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="h-full w-full" style={{
-          backgroundImage: `linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}>
         </div>
@@ -31,10 +32,10 @@ const Hero = () => {
                 HELLO! MY NAME IS
               </h2>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-                <span className="block mb-1"><span className="text-gradient">PEM TSERING</span></span>
-                <span className="block mb-1"><span className="text-gradient">GURUNG</span></span>
-                <span className="block text-3xl sm:text-4xl font-light text-gray-700 dark:text-gray-300">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[color:var(--text)]">
+                <span className="block mb-1">PEM TSERING</span>
+                <span className="block mb-1">GURUNG</span>
+                <span className="block text-3xl sm:text-4xl font-light text-[color:var(--text-light)]">
                   Software Engineer & Student
                 </span>
               </h1>
@@ -43,21 +44,21 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-6 text-base text-gray-600 dark:text-gray-400 max-w-lg"
+                className="mt-6 text-base text-[color:var(--text-light)] max-w-lg"
               >
                 <p className="mb-5">
                   I am currently a junior at the College of Wooster majoring in Computer Science. I am an aspiring software engineer and I am very passionate about building full-stack applications!
                 </p>
                 
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-4 text-black dark:text-white inline-block relative">
+                  <h3 className="text-lg font-semibold mb-4 text-[color:var(--text)] inline-block relative">
                     Tech Stack
-                    <span className="absolute w-12 h-0.5 bg-black dark:bg-white bottom-[-6px] left-0"></span>
+                    <span className="absolute w-12 h-0.5 bg-black bottom-[-6px] left-0"></span>
                   </h3>
                   
                   <div className="mt-5 flex flex-wrap gap-2.5">
                     {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'TypeScript', 'React', 'Node.js', 'Next.js', 'Flask', 'Django', 'PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'MongoDB', 'HTML', 'CSS', 'AWS', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
-                      <span key={i} className="px-3 py-1.5 text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:shadow-md transition-shadow duration-200 inline-block">
+                      <span key={i} className="px-3 py-1.5 text-xs rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] hover:shadow-md transition-shadow duration-200 inline-block">
                         {tech}
                       </span>
                     ))}
@@ -72,12 +73,12 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
                 >
-                  <a 
-                    href="#projects" 
-                    className="px-8 py-3 rounded-none bg-black text-white dark:bg-white dark:text-black font-medium tracking-wider hover-lift inline-block"
+                  <Link 
+                    to="/projects"
+                    className="px-8 py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block"
                   >
                     VIEW WORK
-                  </a>
+                  </Link>
                 </motion.div>
 
                 <motion.div
@@ -91,7 +92,7 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, rotate: 5 }}
-                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                    className="text-gray-700 dark:text-gray-300 hover:bg-[#e5e7eb] hover:text-black p-2 rounded-full transition-colors duration-200"
                   >
                     <FiGithub size={22} />
                   </motion.a>
@@ -100,7 +101,7 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, rotate: 5 }}
-                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                    className="text-gray-700 dark:text-gray-300 hover:bg-[#e5e7eb] hover:text-black p-2 rounded-full transition-colors duration-200"
                   >
                     <FiLinkedin size={22} />
                   </motion.a>
@@ -109,7 +110,7 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, rotate: 5 }}
-                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                    className="text-gray-700 dark:text-gray-300 hover:bg-[#e5e7eb] hover:text-black p-2 rounded-full transition-colors duration-200"
                   >
                     <FiMail size={22} />
                   </motion.a>
