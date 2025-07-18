@@ -8,7 +8,7 @@ const Experience = () => {
     {
       title: "Software Engineer Intern",
       company: "Schneider Electric",
-      period: "May 2025 - Present",
+      period: "May 2025 - July 2025",
       description: "I engineered an agentic co-pilot using a Large Language Model (LLM) and LlamaIndex to translate natural language into database queries, which reduced client data retrieval time by 25%. I also designed a multi-agent architecture in Python, where a central Coordinator Agent delegated tasks to specialized Function Agents (Knowledge, Metrics, Invoice), improving query efficiency by 30%. Additionally, I implemented and trained an intelligent MCP client that dynamically selects tools from the MCP server and passes the necessary parameters, achieving 95% task automation. Further, I developed the central backend for all AI agent operations by building a multi-tool Model Context Protocol (MCP) server with FastAPI and containerized it using Docker.",
       skills: ["Python", "FastAPI", "Docker", "Kubernetes", "Large Language Models (LLM)", "LlamaIndex", "Multi-Agent Systems", "Agentic Co-pilot", "Model Context Protocol (MCP)", "Natural Language Processing", "Database Query Optimization"],
     },
