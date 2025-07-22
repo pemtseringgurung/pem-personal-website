@@ -35,19 +35,19 @@ const Hero = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[color:var(--text)]">
                 <span className="block mb-1">PEM TSERING</span>
                 <span className="block mb-1">GURUNG</span>
-                <span className="block text-3xl sm:text-4xl font-light text-[color:var(--text-light)]">
-                  Software Engineer & Student
-                </span>
+                <span className="block text-2xl sm:text-3xl font-light text-[color:var(--text-light)] whitespace-nowrap">
+  Software Engineer | Full-Stack & AI Development
+</span>
               </h1>
 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-6 text-base text-[color:var(--text-light)] max-w-lg"
+                className="mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
               >
                 <p className="mb-5">
-                  I am currently a junior at the College of Wooster majoring in Computer Science. I am an aspiring software engineer and I am very passionate about building full-stack applications!
+                  I am a junior at the College of Wooster majoring in Computer Science. I am passionate about building intelligent AI agents and full-stack web applications that solve real-world problems. I enjoy combining the logic of backend systems with the creativity of user-focused design, and I am especially excited by the possibilities of autonomous systems powered by modern AI.
                 </p>
                 
                 <div className="mb-6">
@@ -57,8 +57,8 @@ const Hero = () => {
                   </h3>
                   
                   <div className="mt-5 flex flex-wrap gap-2.5">
-                    {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'TypeScript', 'React', 'Node.js', 'Next.js', 'Flask', 'Django', 'PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'MongoDB', 'HTML', 'CSS', 'AWS', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
-                      <span key={i} className="px-3 py-1.5 text-xs rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] hover:shadow-md transition-shadow duration-200 inline-block">
+                    {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'TypeScript', 'React', 'Node.js', 'Next.js', 'LlamaIndex', 'Model Context Protocol (MCP)', 'Flask', 'Django', 'PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'FastAPI', 'MongoDB','PostgreSQL', 'HTML', 'CSS', 'AWS(EC2, S3, EKS)', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
+                      <span key={i} className="px-2 py-1 text-[10px] rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] hover:shadow-md transition-shadow duration-200 inline-block">
                         {tech}
                       </span>
                     ))}
