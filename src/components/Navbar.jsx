@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -12,16 +12,23 @@ const Navbar = () => {
     typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches
   );
 
-  // Removed scroll/activeSection logic for router-based navigation.
+  // Add scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[color:var(--background-alt)]/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
-      }`} 
+      className="fixed w-full z-50 bg-transparent" 
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -29,6 +36,8 @@ const Navbar = () => {
             <motion.div 
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold"
+              animate={{ opacity: scrolled ? 0 : 1 }}
+              transition={{ duration: 0.3 }}
             >
               <span className="text-[color:var(--text)]">PEM'S </span>
               <span className="text-black">PORTFOLIO</span>
