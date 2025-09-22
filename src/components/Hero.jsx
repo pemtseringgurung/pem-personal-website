@@ -47,7 +47,7 @@ const Hero = () => {
                 className="mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
               >
                 <p className="mb-5">
-                  I am a junior at the College of Wooster majoring in Computer Science. I am passionate about building intelligent AI agents and full-stack web applications that solve real-world problems. I enjoy combining the logic of backend systems with the creativity of user-focused design, and I am especially excited by the possibilities of autonomous systems powered by modern AI.
+                  I am a Senior at the College of Wooster majoring in Computer Science. I am passionate about building intelligent AI agents and full-stack web applications that solve real-world problems. I enjoy combining the logic of backend systems with the creativity of user-focused design, and I am especially excited by the possibilities of autonomous systems powered by modern AI.
                 </p>
                 
                 <div className="mb-6">
