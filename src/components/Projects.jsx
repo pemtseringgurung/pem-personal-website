@@ -10,26 +10,26 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "Rate Lowry!",
-      description: "A full-stack application for discovering and reviewing food items using Next.js and MongoDB, featuring real-time image uploads with Cloudinary and dynamic station-based filtering. Implemented with a responsive Tailwind CSS UI, including an interactive rating system and image preview functionality for seamless user experience across mobile and desktop devices.",
+      title: "rate lowry!",
+      description: "a full-stack application for discovering and reviewing food items using next.js and mongodb, featuring real-time image uploads with cloudinary and dynamic station-based filtering. implemented with a responsive tailwind css ui, including an interactive rating system and image preview functionality for seamless user experience across mobile and desktop devices.",
       image: rateLowry,
-      technologies: ['Next.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS', 'React'],
+      technologies: ['next.js', 'mongodb', 'cloudinary', 'tailwind css', 'react'],
       liveLink: "https://rate-lowry.vercel.app/",
       repoLink: "https://github.com/pemtseringgurung/rate-lowry"
     },
     {
-      title: "Fire Rescue Resource Allocator",
-      description: "An interactive mapping tool for optimizing emergency response in Los Angeles by visualizing fire station locations and incidents.",
+      title: "fire rescue resource allocator",
+      description: "an interactive mapping tool for optimizing emergency response in los angeles by visualizing fire station locations and incidents.",
       image: fireImage,
-      technologies: ['React', 'React Router', 'Leaflet', 'React-Leaflet', 'Vite', 'CSS Modules'],
+      technologies: ['react', 'react router', 'leaflet', 'react-leaflet', 'vite', 'css modules'],
       liveLink: "https://fire-rescue-resource-allocator-luk4.vercel.app/",
       repoLink: "https://github.com/pemtseringgurung/fire-rescue-resource-allocator"
     },
     {
-      title: "Pem's Room Tracking Website",
-      description: "A web application for managing and tracking room availability using Vite and React. Features real-time updates and a user-friendly interface for efficient room management.",
+      title: "pem's room tracking website",
+      description: "a web application for managing and tracking room availability using vite and react. features real-time updates and a user-friendly interface for efficient room management.",
       image: roomImage,
-      technologies: ['React', 'Vite', 'React Modal', 'ESLint'],
+      technologies: ['react', 'vite', 'react modal', 'eslint'],
       liveLink: "https://pemroomtrackingwebsite.vercel.app/",
       repoLink: "https://github.com/pemtseringgurung/pem_room_tracking_website"
     },
@@ -49,9 +49,9 @@ const Projects = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="section-title text-[color:var(--text)]">Projects</h2>
+          <h2 className="section-title text-[color:var(--text)]">projects</h2>
           <p className="text-[color:var(--text-light)] max-w-2xl">
-            A selection of my recent work. 
+            a selection of my recent work. 
           </p>
         </motion.div>
         <motion.div 
@@ -86,11 +86,12 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-[color:var(--primary)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/20 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-4">
                       <motion.a
                         whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 rounded-full"
+                        whileTap={{ scale: 0.95 }}
+                        className="p-3 md:p-2 bg-white text-black rounded-full shadow-lg"
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -99,7 +100,8 @@ const Projects = () => {
                       </motion.a>
                       <motion.a
                         whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 rounded-full"
+                        whileTap={{ scale: 0.95 }}
+                        className="p-3 md:p-2 bg-white text-black rounded-full shadow-lg"
                         href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"

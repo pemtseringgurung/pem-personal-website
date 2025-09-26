@@ -16,12 +16,12 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="md:w-1/2"
+            className="md:w-1/2 order-2 md:order-1"
           >
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -29,14 +29,14 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h2 className="font-mono text-sm tracking-widest text-gray-500 dark:text-gray-400 mb-2">
-                HELLO! MY NAME IS
+                hello! my name is
               </h2>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[color:var(--text)]">
-                <span className="block mb-1">PEM TSERING</span>
-                <span className="block mb-1">GURUNG</span>
-                <span className="block text-2xl sm:text-3xl font-light text-[color:var(--text-light)] whitespace-nowrap">
-  Software Engineer | Full-Stack & AI Development
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-[color:var(--text)]">
+                <span className="block mb-1">pem tsering</span>
+                <span className="block mb-1">gurung</span>
+                <span className="block text-lg sm:text-xl md:text-3xl font-light text-[color:var(--text-light)]">
+  software engineer | full-stack & ai development
 </span>
               </h1>
 
@@ -44,20 +44,20 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
+                className="mt-4 md:mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
               >
                 <p className="mb-5">
-                  I am a Senior at the College of Wooster majoring in Computer Science. I am passionate about building intelligent AI agents and full-stack web applications that solve real-world problems. I enjoy combining the logic of backend systems with the creativity of user-focused design, and I am especially excited by the possibilities of autonomous systems powered by modern AI.
+                  i am a senior at the college of wooster majoring in computer science. i am passionate about building intelligent ai agents and full-stack web applications that solve real-world problems. i enjoy combining the logic of backend systems with the creativity of user-focused design, and i am especially excited by the possibilities of autonomous systems powered by modern ai.
                 </p>
                 
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-4 text-[color:var(--text)] inline-block relative">
-                    Tech Stack
+                <div className="mb-4 md:mb-6">
+                  <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-[color:var(--text)] inline-block relative">
+                    tech stack
                     <span className="absolute w-12 h-0.5 bg-black bottom-[-6px] left-0"></span>
                   </h3>
                   
-                  <div className="mt-5 flex flex-wrap gap-2.5">
-                    {['JavaScript', 'Python', 'Java', 'C++', 'Kotlin', 'TypeScript', 'React', 'Node.js', 'Next.js', 'LlamaIndex', 'Model Context Protocol (MCP)', 'Flask', 'Django', 'PyTorch', 'TensorFlow', 'Git', 'GitHub', 'Jupyter', 'FastAPI', 'MongoDB','PostgreSQL', 'HTML', 'CSS', 'AWS(EC2, S3, EKS)', 'GCP', 'Firebase', 'Docker', 'Kubernetes'].map((tech, i) => (
+                  <div className="mt-4 md:mt-5 flex flex-wrap gap-2">
+                    {['javascript', 'python', 'java', 'c++', 'kotlin', 'typescript', 'react', 'node.js', 'next.js', 'llamaindex', 'model context protocol (mcp)', 'flask', 'django', 'pytorch', 'tensorflow', 'git', 'github', 'jupyter', 'fastapi', 'mongodb','postgresql', 'html', 'css', 'aws(ec2, s3, eks)', 'gcp', 'firebase', 'docker', 'kubernetes'].map((tech, i) => (
                       <span key={i} className="px-2 py-1 text-[10px] rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] hover:shadow-md transition-shadow duration-200 inline-block">
                         {tech}
                       </span>
@@ -65,9 +65,7 @@ const Hero = () => {
                   </div>
                 </div>
               </motion.div>
-
-              {/* Action button and social icons in separate rows */}
-              <div className="mt-8 flex flex-col gap-6">
+              <div className="mt-6 md:mt-8 flex flex-col gap-4 md:gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -75,9 +73,9 @@ const Hero = () => {
                 >
                   <Link 
                     to="/projects"
-                    className="px-8 py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block"
+                    className="px-6 md:px-8 py-2.5 md:py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block w-fit text-sm md:text-base"
                   >
-                    VIEW WORK
+                    view work
                   </Link>
                 </motion.div>
 
@@ -123,20 +121,14 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:w-1/2 flex justify-center md:justify-end"
+            className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0"
           >
-            <div className="relative">
-              <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 relative">
-                <div className="absolute inset-0 border-2 border-black dark:border-white">
-                  <div className="w-full h-full bg-gray-100 dark:bg-gray-900 overflow-hidden">
-                    <img 
-                      src={heroImage} 
-                      alt="Hero" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-96 md:h-96">
+              <img 
+                src={heroImage} 
+                alt="pem tsering gurung" 
+                className="w-full h-full object-cover rounded-sm" 
+              />
             </div>
           </motion.div>
         </div>

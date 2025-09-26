@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiFileText } from 'react-icons/fi';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -39,8 +39,8 @@ const Navbar = () => {
               animate={{ opacity: scrolled ? 0 : 1 }}
               transition={{ duration: 0.3 }}
             >
-              <span className="text-[color:var(--text)]">PEM'S </span>
-              <span className="text-black">PORTFOLIO</span>
+              <span className="text-[color:var(--text)]">pem's </span>
+              <span className="text-black">portfolio</span>
             </motion.div>
           </div>
 
@@ -49,17 +49,19 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-1">
               {[
-                { name: 'Home', path: '/' },
-                { name: 'Experience', path: '/experience' },
-                { name: 'Projects', path: '/projects' }
+                { name: 'home', path: '/' },
+                { name: 'experience', path: '/experience' },
+                { name: 'projects', path: '/projects' },
+                { name: 'resume', path: '/resume', icon: <FiFileText size={16} /> }
               ].map((item) => (
                 <motion.div key={item.name} whileHover={{ scale: 1.05 }} className="inline-block">
                   <Link
                     to={item.path}
                     className={
-                      `px-5 py-2 rounded-md text-sm tracking-widest relative overflow-hidden text-[color:var(--text-light)] hover:text-black font-medium nav-link`
+                      `px-5 py-2 rounded-md text-sm tracking-widest relative overflow-hidden text-[color:var(--text-light)] hover:text-black font-medium nav-link flex items-center gap-1`
                     }
                   >
+                    {item.icon}
                     {item.name}
                   </Link>
                 </motion.div>
@@ -88,16 +90,18 @@ const Navbar = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {[
-              { name: 'Home', path: '/' },
-              { name: 'Experience', path: '/experience' },
-              { name: 'Projects', path: '/projects' }
+              { name: 'home', path: '/' },
+              { name: 'experience', path: '/experience' },
+              { name: 'projects', path: '/projects' },
+              { name: 'resume', path: '/resume', icon: <FiFileText size={18} /> }
             ].map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="block px-3 py-2 rounded-md text-base text-gray-600 hover:text-black"
+                className="flex items-center px-3 py-2 rounded-md text-base text-gray-600 hover:text-black"
                 onClick={() => setIsOpen(false)}
               >
+                {item.icon && <span className="mr-2">{item.icon}</span>}
                 {item.name}
               </Link>
             ))}
