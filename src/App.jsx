@@ -7,7 +7,6 @@ function App() {
 
   return (
     <div className="App bg-[color:var(--background)] text-[color:var(--text)]">
-      {/* Content now handled by Router.jsx */}
     </div>
   );
 }
