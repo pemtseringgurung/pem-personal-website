@@ -6,7 +6,7 @@ import heroImage from '../images/pem.png';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-24 md:pt-32 pb-16 min-h-screen flex flex-col justify-center relative overflow-hidden bg-[color:var(--background)]">
+    <section id="home" className="pt-20 md:pt-32 pb-12 md:pb-16 min-h-screen flex flex-col justify-center relative overflow-hidden bg-[color:var(--background)]">
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="h-full w-full" style={{
           backgroundImage: `linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px)`,
@@ -32,10 +32,10 @@ const Hero = () => {
                 hello! my name is
               </h2>
 
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-[color:var(--text)]">
-                <span className="block mb-1">pem tsering</span>
-                <span className="block mb-1">gurung</span>
-                <span className="block text-lg sm:text-xl md:text-3xl font-light text-[color:var(--text-light)]">
+              <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight text-[color:var(--text)] leading-tight">
+                <span className="block mb-0.5">pem tsering</span>
+                <span className="block mb-2">gurung</span>
+                <span className="block text-base sm:text-xl md:text-3xl font-light text-[color:var(--text-light)] mt-1">
   software engineer | full-stack & ai development
 </span>
               </h1>
@@ -44,13 +44,74 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-4 md:mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
+                className="mt-3 md:mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
               >
-                <p className="mb-5">
-                  i am a senior at the college of wooster majoring in computer science. i am passionate about building intelligent ai agents and full-stack web applications that solve real-world problems. i enjoy combining the logic of backend systems with the creativity of user-focused design, and i am especially excited by the possibilities of autonomous systems powered by modern ai.
+                {/* Condensed mobile bio */}
+                <p className="mb-4 md:mb-5 leading-relaxed md:leading-normal">
+                  <span className="md:hidden">
+                    senior @ college of wooster studying computer science. passionate about building ai agents and full-stack applications that solve real-world problems.
+                  </span>
+                  <span className="hidden md:inline">
+                    i am a senior at the college of wooster majoring in computer science. i am passionate about building intelligent ai agents and full-stack web applications that solve real-world problems. i enjoy combining the logic of backend systems with the creativity of user-focused design, and i am especially excited by the possibilities of autonomous systems powered by modern ai.
+                  </span>
                 </p>
                 
-                <div className="mb-4 md:mb-6">
+                {/* Mobile-only CTAs - Prominent positioning */}
+                <div className="md:hidden mt-5 flex flex-col gap-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                  >
+                    <Link 
+                      to="/projects"
+                      className="px-8 py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block w-full text-center text-sm shadow-lg"
+                    >
+                      view my work
+                    </Link>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.0, duration: 0.5 }}
+                    className="flex justify-center space-x-8"
+                  >
+                    <motion.a
+                      href="https://github.com/pemtseringgurung"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-gray-700 dark:text-gray-300 hover:text-black p-2.5 rounded-full hover:bg-gray-100 transition-all duration-200"
+                    >
+                      <FiGithub size={26} />
+                    </motion.a>
+                    <motion.a
+                      href="https://www.linkedin.com/in/pemgurung/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-gray-700 dark:text-gray-300 hover:text-black p-2.5 rounded-full hover:bg-gray-100 transition-all duration-200"
+                    >
+                      <FiLinkedin size={26} />
+                    </motion.a>
+                    <motion.a
+                      href="mailto:pemgurung541@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-gray-700 dark:text-gray-300 hover:text-black p-2.5 rounded-full hover:bg-gray-100 transition-all duration-200"
+                    >
+                      <FiMail size={26} />
+                    </motion.a>
+                  </motion.div>
+                </div>
+                
+                {/* Desktop Tech Stack - Original position */}
+                <div className="hidden md:block mb-4 md:mb-6">
                   <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-[color:var(--text)] inline-block relative">
                     tech stack
                     <span className="absolute w-12 h-0.5 bg-black bottom-[-6px] left-0"></span>
@@ -65,7 +126,9 @@ const Hero = () => {
                   </div>
                 </div>
               </motion.div>
-              <div className="mt-6 md:mt-8 flex flex-col gap-4 md:gap-6">
+              
+              {/* Desktop-only CTAs - Original position */}
+              <div className="hidden md:flex mt-6 md:mt-8 flex-col gap-4 md:gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -114,6 +177,26 @@ const Hero = () => {
                   </motion.a>
                 </motion.div>
               </div>
+              
+              {/* Mobile Tech Stack - Condensed with key technologies */}
+              <div className="md:hidden mt-8">
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold mb-3 text-[color:var(--text)] tracking-wider uppercase">
+                    core skills
+                  </h3>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {['react', 'python', 'next.js', 'typescript', 'node.js', 'pytorch', 'mongodb', 'aws'].map((tech, i) => (
+                      <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] transition-all duration-200">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-xs text-gray-500 mt-3">
+                    + 20 more technologies
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -121,13 +204,13 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0"
+            className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-4 md:mb-0"
           >
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-96 md:h-96">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-96 md:h-96">
               <img 
                 src={heroImage} 
                 alt="pem tsering gurung" 
-                className="w-full h-full object-cover rounded-sm" 
+                className="w-full h-full object-cover rounded-lg md:rounded-sm shadow-lg md:shadow-none" 
               />
             </div>
           </motion.div>
