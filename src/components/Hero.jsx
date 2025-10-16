@@ -28,14 +28,14 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="font-mono text-sm tracking-widest text-gray-500 dark:text-gray-400 mb-2">
+              <h2 className="font-mono text-xs md:text-sm tracking-widest text-gray-500 dark:text-gray-400 mb-2 md:mb-2">
                 hello! my name is
               </h2>
 
-              <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight text-[color:var(--text)] leading-tight">
+              <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold tracking-tight text-[color:var(--text)] leading-tight mb-1">
                 <span className="block mb-0.5">pem tsering</span>
-                <span className="block mb-2">gurung</span>
-                <span className="block text-base sm:text-xl md:text-3xl font-light text-[color:var(--text-light)] mt-1">
+                <span className="block mb-2 md:mb-1">gurung</span>
+                <span className="block text-sm sm:text-xl md:text-3xl font-normal md:font-light text-[color:var(--text-light)] mt-0 md:mt-1">
   software engineer | full-stack & ai development
 </span>
               </h1>
@@ -44,10 +44,10 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-3 md:mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
+                className="mt-4 md:mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
               >
-                {/* Condensed mobile bio */}
-                <p className="mb-4 md:mb-5 leading-relaxed md:leading-normal">
+                {/* Condensed mobile bio with better readability */}
+                <p className="mb-5 md:mb-5 leading-relaxed text-gray-600 dark:text-gray-400">
                   <span className="md:hidden">
                     senior @ college of wooster studying computer science. passionate about building ai agents and full-stack applications that solve real-world problems.
                   </span>
@@ -56,8 +56,8 @@ const Hero = () => {
                   </span>
                 </p>
                 
-                {/* Mobile-only CTAs - Prominent positioning */}
-                <div className="md:hidden mt-5 flex flex-col gap-4">
+                {/* Mobile-only CTAs - Optimized for focus and conversion */}
+                <div className="md:hidden mt-6 flex flex-col gap-5">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ const Hero = () => {
                   >
                     <Link 
                       to="/projects"
-                      className="px-8 py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block w-full text-center text-sm shadow-lg"
+                      className="px-8 py-3.5 rounded-none bg-black text-white font-semibold tracking-wide hover-lift inline-block w-full text-center text-base shadow-xl"
                     >
                       view my work
                     </Link>
@@ -75,7 +75,7 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.0, duration: 0.5 }}
-                    className="flex justify-center space-x-8"
+                    className="flex justify-center items-center space-x-10 py-2"
                   >
                     <motion.a
                       href="https://github.com/pemtseringgurung"
@@ -83,9 +83,10 @@ const Hero = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.15 }}
                       whileTap={{ scale: 0.95 }}
-                      className="text-gray-700 dark:text-gray-300 hover:text-black p-2.5 rounded-full hover:bg-gray-100 transition-all duration-200"
+                      className="text-gray-600 dark:text-gray-300 hover:text-black p-3 rounded-full hover:bg-gray-100 transition-all duration-200"
+                      aria-label="GitHub"
                     >
-                      <FiGithub size={26} />
+                      <FiGithub size={28} />
                     </motion.a>
                     <motion.a
                       href="https://www.linkedin.com/in/pemgurung/"
@@ -93,9 +94,10 @@ const Hero = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.15 }}
                       whileTap={{ scale: 0.95 }}
-                      className="text-gray-700 dark:text-gray-300 hover:text-black p-2.5 rounded-full hover:bg-gray-100 transition-all duration-200"
+                      className="text-gray-600 dark:text-gray-300 hover:text-black p-3 rounded-full hover:bg-gray-100 transition-all duration-200"
+                      aria-label="LinkedIn"
                     >
-                      <FiLinkedin size={26} />
+                      <FiLinkedin size={28} />
                     </motion.a>
                     <motion.a
                       href="mailto:pemgurung541@gmail.com"
@@ -103,9 +105,10 @@ const Hero = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.15 }}
                       whileTap={{ scale: 0.95 }}
-                      className="text-gray-700 dark:text-gray-300 hover:text-black p-2.5 rounded-full hover:bg-gray-100 transition-all duration-200"
+                      className="text-gray-600 dark:text-gray-300 hover:text-black p-3 rounded-full hover:bg-gray-100 transition-all duration-200"
+                      aria-label="Email"
                     >
-                      <FiMail size={26} />
+                      <FiMail size={28} />
                     </motion.a>
                   </motion.div>
                 </div>
@@ -178,25 +181,6 @@ const Hero = () => {
                 </motion.div>
               </div>
               
-              {/* Mobile Tech Stack - Condensed with key technologies */}
-              <div className="md:hidden mt-8">
-                <div className="mb-4">
-                  <h3 className="text-sm font-semibold mb-3 text-[color:var(--text)] tracking-wider uppercase">
-                    core skills
-                  </h3>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {['react', 'python', 'next.js', 'typescript', 'node.js', 'pytorch', 'mongodb', 'aws'].map((tech, i) => (
-                      <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] transition-all duration-200">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-3">
-                    + 20 more technologies
-                  </p>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
 
@@ -204,13 +188,13 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-4 md:mb-0"
+            className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-5 md:mb-0"
           >
-            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-96 md:h-96">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-96 md:h-96">
               <img 
                 src={heroImage} 
                 alt="pem tsering gurung" 
-                className="w-full h-full object-cover rounded-lg md:rounded-sm shadow-lg md:shadow-none" 
+                className="w-full h-full object-cover rounded-2xl md:rounded-sm shadow-2xl md:shadow-none" 
               />
             </div>
           </motion.div>
