@@ -4,24 +4,33 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import fireImage from "../images/fire.png";
 import roomImage from "../images/room.png";
 import rateLowry from "../images/ratelowry.png";
+import isOralDefense from "../images/is-oral-defense.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   
   const projects = [
     {
-      title: "rate lowry!",
-      description: "a full-stack application for discovering and reviewing food items using next.js and mongodb, featuring real-time image uploads with cloudinary and dynamic station-based filtering. implemented with a responsive tailwind css ui, including an interactive rating system and image preview functionality for seamless user experience across mobile and desktop devices.",
+      title: "wooster independent Study (i.s.) oral defense scheduler",
+      description: "a full-stack scheduling platform adopted by 3 departments, automating the complex oral defense scheduling process for over 80 students and 15 professors.",
+      image: isOralDefense,
+      technologies: ['typescript', 'next.js', 'supabase', 'postgresql', 'supabase auth'],
+      liveLink: "https://woo-oral.vercel.app/",
+      repoLink: "https://github.com/pemtseringgurung/WooOral"
+    },
+    {
+      title: "rate lowry",
+      description: "a full-stack food review application for discovering and rating dining hall menu items. built with a next.js restful api achieving a 95/100 lighthouse performance score and sub-200ms api response times through optimized mongodb queries. integrated cloudinary api for image uploads and cdn delivery, cutting image load times by 70%.",
       image: rateLowry,
-      technologies: ['next.js', 'mongodb', 'cloudinary', 'tailwind css', 'react'],
+      technologies: ['next.js', 'mongodb', 'tailwind css', 'cloudinary', 'react.js'],
       liveLink: "https://rate-lowry.vercel.app/",
       repoLink: "https://github.com/pemtseringgurung/rate-lowry"
     },
     {
       title: "fire rescue resource allocator",
-      description: "an interactive mapping tool for optimizing emergency response in los angeles by visualizing fire station locations and incidents.",
+      description: "an emergency response optimization tool using a javascript genetic algorithm to determine optimal fire station placement and emergency routes across los angeles. secured 2nd place (developer track) at woohackathon. features an interactive map ui with react and leaflet.js to visualize optimal routing.",
       image: fireImage,
-      technologies: ['react', 'react router', 'leaflet', 'react-leaflet', 'vite', 'css modules'],
+      technologies: ['react.js', 'leaflet.js', 'javascript', 'vite', 'genetic algorithm'],
       liveLink: "https://fire-rescue-resource-allocator-luk4.vercel.app/",
       repoLink: "https://github.com/pemtseringgurung/fire-rescue-resource-allocator"
     },
@@ -29,7 +38,7 @@ const Projects = () => {
       title: "pem's room tracking website",
       description: "a web application for managing and tracking room availability using vite and react. features real-time updates and a user-friendly interface for efficient room management.",
       image: roomImage,
-      technologies: ['react', 'vite', 'react modal', 'eslint'],
+      technologies: ['react.js', 'vite', 'react modal', 'eslint'],
       liveLink: "https://pemroomtrackingwebsite.vercel.app/",
       repoLink: "https://github.com/pemtseringgurung/pem_room_tracking_website"
     },
