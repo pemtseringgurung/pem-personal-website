@@ -9,7 +9,7 @@ const Experience = () => {
       title: "software engineer intern",
       company: "Schneider Electric",
       period: "may 2025 - july 2025",
-      description: "i engineered an agentic co-pilot using a large language model (llm) and llamaindex to translate natural language into database queries, which reduced client data retrieval time by 25%. i also designed a multi-agent architecture in python, where a central coordinator agent delegated tasks to specialized function agents (knowledge, metrics, invoice), improving query efficiency by 30%. additionally, i implemented and trained an intelligent mcp client that dynamically selects tools from the mcp server and passes the necessary parameters, achieving 95% task automation. further, i developed the central backend for all ai agent operations by building a multi-tool model context protocol (mcp) server with fastapi and containerized it using docker.",
+      description: "my team's main project was to architect and deploy an end-to-end ai automation platform. we built the entire system, starting with a scalable model context protocol (mcp) server backend on aws eks using fastapi, docker, and kubernetes. we then built the intelligent client that consumed this backend, using a large language model (llm) to dynamically execute workflows. this system was a major success and automated 95% of ai agent tasks. separately, we focused on data retrieval efficiency. we engineered an agentic ai co-pilot using python and llamaindex to translate natural language into sql, which cut client data retrieval time by 25%. we pushed this further by designing a delegated, multi-agent workflow that optimized the sql logic itself, accelerating query execution by another 30%.",
       skills: ["python", "fastapi", "docker", "kubernetes", "large language models (llm)", "llamaindex", "multi-agent systems", "agentic co-pilot", "model context protocol (mcp)", "natural language processing", "database query optimization"],
     },
 
@@ -17,14 +17,14 @@ const Experience = () => {
       title: "digital archive research intern",
       company: "The College of Wooster",
       period: "oct 2023 - sep 2024",
-      description: "i maintained and enhanced the full-stack website for the anglophone chile project using django, react.js, and postgresql, improving user experience by 20% through front-end optimizations. i developed an automated email notification system with django, celery, and redis, increasing user engagement by 30%. additionally, i streamlined the website's architecture with django rest framework, improving usability scores by 25% based on user feedback.",
+      description: "in my role as digital archive research intern, i led the full-stack development for the anglophone chile archive project. my primary focus was on re-architecting the site for modern performance and adding new, high-value user features. on the backend, i led the migration to a react and django rest framework architecture, which was a major success that cut api response times by 40%. i also designed and built an automated email notification system from scratch using django, celery, and redis. this new system delivered over 500 personalized notifications monthly and increased user engagement by 30%. on the frontend, i implemented over 20 specific optimizations using react and css, which directly reduced page load time by 15% and cut mobile bounce rates by 20%.",
       skills: ["django", "react.js", "postgresql", "bootstrap", "css", "celery", "redis", "django rest framework (drf)", "smtp"]
     },
     {
       title: "mathematics and computational science research intern",
       company: " The College of Wooster",
       period: "jan 2024 - may 2024",
-      description: "i developed deep learning models with tensorflow and scipy, improving pattern identification by 12% and reducing analysis time by 20%. i built data pipelines with scikit-learn, matplotlib, and seaborn, increasing accuracy by 15% in bacterial resistance analysis. i also designed differential equation models, used sqlite and jupyter notebooks, and created agent-based models with pytorch and mlflow, boosting prediction accuracy by 10%.",
+      description: "my work as a research intern involved applying machine learning to accelerate and improve scientific analysis. my first step was to build a robust data pipeline, where i automated cleaning and integration workflows using pandas, slashing data preparation time by 40%. i then engineered the full pipeline with scikit-learn and matplotlib, which boosted bacterial analysis accuracy by 15%. with this efficient data pipeline in place, i developed tensorflow deep learning models that accelerated experimental analysis by 20% by improving pattern identification accuracy by 12% across thousands of samples. i also built predictive agent-based simulations using mesa, pytorch, and mlflow, which increased the predictive accuracy of experimental outcomes by 10%.",
       skills: ["tensorflow", "scipy", "scikit-learn", "matplotlib", "seaborn", "sqlite", "jupyter notebooks", "mesa", "pytorch", "mlflow", "pandas"]
     }
   ];
