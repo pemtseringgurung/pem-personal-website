@@ -24,16 +24,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed w-full z-50 bg-transparent" 
+      className="fixed w-full z-50 bg-transparent"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold"
               animate={{ opacity: scrolled ? 0 : 1 }}
@@ -45,13 +45,14 @@ const Navbar = () => {
           </div>
 
 
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-1">
               {[
                 { name: 'home', path: '/' },
                 { name: 'experience', path: '/experience' },
                 { name: 'projects', path: '/projects' },
+                { name: 'research', path: '/research' },
                 { name: 'resume', path: '/resume', icon: <FiFileText size={16} /> }
               ].map((item) => (
                 <motion.div key={item.name} whileHover={{ scale: 1.05 }} className="inline-block">
@@ -65,10 +66,10 @@ const Navbar = () => {
                     {item.name}
                   </Link>
                 </motion.div>
-              ))} 
+              ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -81,7 +82,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: 'auto', opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
@@ -93,6 +94,7 @@ const Navbar = () => {
               { name: 'home', path: '/' },
               { name: 'experience', path: '/experience' },
               { name: 'projects', path: '/projects' },
+              { name: 'research', path: '/research' },
               { name: 'resume', path: '/resume', icon: <FiFileText size={18} /> }
             ].map((item) => (
               <Link

@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Resume from './components/Resume';
+import Research from './components/Research';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function AppRouter() {
@@ -19,6 +20,7 @@ export default function AppRouter() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/research" element={<Research />} />
         </Routes>
         <Analytics />
       </div>

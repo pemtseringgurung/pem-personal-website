@@ -5,11 +5,20 @@ import fireImage from "../images/fire.png";
 import roomImage from "../images/room.png";
 import rateLowry from "../images/ratelowry.png";
 import isOralDefense from "../images/is-oral-defense.png";
+import axeImage from "../images/axe.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  
+
   const projects = [
+    {
+      title: "axe",
+      description: "a lightweight web app that uses langchain and langgraph with google gemini to analyze personal spending, reveal behavioral triggers, and give clear actionable insights.",
+      image: axeImage,
+      technologies: ['next.js', 'python (flask)', 'langchain', 'google gemini', 'tailwind css'],
+      liveLink: "https://axe-ten.vercel.app/",
+      repoLink: "https://github.com/pemtseringgurung/axe"
+    },
     {
       title: "wooster independent Study (i.s.) oral defense scheduler",
       description: "a full-stack scheduling platform adopted by 3 departments, automating the complex oral defense scheduling process for over 80 students and 15 professors.",
@@ -43,7 +52,7 @@ const Projects = () => {
       repoLink: "https://github.com/pemtseringgurung/pem_room_tracking_website"
     },
   ];
-  
+
   const filteredProjects = activeFilter === 'All'
     ? projects
     : projects.filter(project => project.technologies.includes(activeFilter));
@@ -53,17 +62,16 @@ const Projects = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
           className="mb-16"
         >
           <h2 className="section-title text-[color:var(--text)]">projects</h2>
           <p className="text-[color:var(--text-light)] max-w-2xl">
-            a selection of my recent work. 
+            a selection of my recent work.
           </p>
         </motion.div>
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
           variants={{
             hidden: { opacity: 0 },
@@ -75,8 +83,7 @@ const Projects = () => {
             }
           }}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          animate="show"
         >
           {filteredProjects.map((project, index) => (
             <motion.div
