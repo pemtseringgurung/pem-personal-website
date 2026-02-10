@@ -34,9 +34,8 @@ const Experience = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
           className="mb-16"
         >
           <h2 className="section-title text-[color:var(--text)]">experience</h2>
@@ -50,9 +49,8 @@ const Experience = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="mb-12 last:mb-0"
             >
               <div className="flex flex-col md:flex-row">
@@ -63,10 +61,10 @@ const Experience = () => {
                         {exp.period}
                       </span>
                       <div className="ml-3 md:ml-4 w-10 h-10 md:w-12 md:h-12">
-                        <img 
+                        <img
                           src={index === 0 ? seLogo : cowImage}
                           alt={`${exp.title} logo`}
-                          className="w-full h-full object-cover rounded-sm" 
+                          className="w-full h-full object-cover rounded-sm"
                         />
                       </div>
                     </div>
