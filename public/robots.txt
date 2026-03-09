@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pemtseringugrung.com/sitemap.xml
