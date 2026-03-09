@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import heroImage from '../images/pem.png'; 
+import heroImage384 from '../images/pem-384.webp';
+import heroImage176 from '../images/pem-176.webp';
 
 const Hero = () => {
   return (
@@ -36,8 +37,8 @@ const Hero = () => {
                 <span className="block mb-0.5">pem tsering</span>
                 <span className="block mb-2 md:mb-1">gurung</span>
                 <span className="block text-sm sm:text-xl md:text-3xl font-normal md:font-light text-[color:var(--text-light)] mt-0 md:mt-1">
-  software engineer | full-stack & ai development
-</span>
+                  software engineer | full-stack & ai development
+                </span>
               </h1>
 
               <motion.div
@@ -55,7 +56,7 @@ const Hero = () => {
                     i am a senior at the college of wooster majoring in computer science. i am passionate about building intelligent ai agents and full-stack web applications that solve real-world problems. i enjoy combining the logic of backend systems with the creativity of user-focused design, and i am especially excited by the possibilities of autonomous systems powered by modern ai.
                   </span>
                 </p>
-                
+
                 {/* Mobile-only CTAs - Optimized for focus and conversion */}
                 <div className="md:hidden mt-6 flex flex-col gap-5">
                   <motion.div
@@ -63,7 +64,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                   >
-                    <Link 
+                    <Link
                       to="/projects"
                       className="px-8 py-3.5 rounded-none bg-black text-white font-semibold tracking-wide hover-lift inline-block w-full text-center text-base shadow-xl"
                     >
@@ -112,16 +113,16 @@ const Hero = () => {
                     </motion.a>
                   </motion.div>
                 </div>
-                
+
                 {/* Desktop Tech Stack - Original position */}
                 <div className="hidden md:block mb-4 md:mb-6">
                   <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-[color:var(--text)] inline-block relative">
                     tech stack
                     <span className="absolute w-12 h-0.5 bg-black bottom-[-6px] left-0"></span>
                   </h3>
-                  
+
                   <div className="mt-4 md:mt-5 flex flex-wrap gap-2">
-                    {['javascript', 'python', 'java', 'c++', 'kotlin', 'typescript', 'react', 'node.js', 'next.js', 'llamaindex', 'model context protocol (mcp)', 'flask', 'django', 'pytorch', 'tensorflow', 'git', 'github', 'jupyter', 'fastapi', 'mongodb','postgresql', 'html', 'css', 'aws(ec2, s3, eks)', 'gcp', 'firebase', 'docker', 'kubernetes'].map((tech, i) => (
+                    {['javascript', 'python', 'java', 'c++', 'kotlin', 'typescript', 'react', 'node.js', 'next.js', 'llamaindex', 'model context protocol (mcp)', 'flask', 'django', 'pytorch', 'tensorflow', 'git', 'github', 'jupyter', 'fastapi', 'mongodb', 'postgresql', 'html', 'css', 'aws(ec2, s3, eks)', 'gcp', 'firebase', 'docker', 'kubernetes'].map((tech, i) => (
                       <span key={i} className="px-2 py-1 text-[10px] rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] hover:shadow-md transition-shadow duration-200 inline-block">
                         {tech}
                       </span>
@@ -129,7 +130,7 @@ const Hero = () => {
                   </div>
                 </div>
               </motion.div>
-              
+
               {/* Desktop-only CTAs - Original position */}
               <div className="hidden md:flex mt-6 md:mt-8 flex-col gap-4 md:gap-6">
                 <motion.div
@@ -137,7 +138,7 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
                 >
-                  <Link 
+                  <Link
                     to="/projects"
                     className="px-6 md:px-8 py-2.5 md:py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block w-fit text-sm md:text-base"
                   >
@@ -180,7 +181,7 @@ const Hero = () => {
                   </motion.a>
                 </motion.div>
               </div>
-              
+
             </motion.div>
           </motion.div>
 
@@ -191,10 +192,17 @@ const Hero = () => {
             className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-5 md:mb-0"
           >
             <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-96 md:h-96">
-              <img 
-                src={heroImage} 
-                alt="pem tsering gurung" 
-                className="w-full h-full object-cover rounded-2xl md:rounded-sm shadow-2xl md:shadow-none" 
+              <img
+                srcSet={`${heroImage176} 176w, ${heroImage384} 384w`}
+                sizes="(max-width: 640px) 176px, 384px"
+                src={heroImage384}
+                alt="pem tsering gurung"
+                width={384}
+                height={384}
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+                className="w-full h-full object-cover rounded-2xl md:rounded-sm shadow-2xl md:shadow-none"
               />
             </div>
           </motion.div>
