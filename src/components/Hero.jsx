@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import heroImage384 from '../images/pem-384.webp';
@@ -7,7 +6,7 @@ import heroImage176 from '../images/pem-176.webp';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-20 md:pt-32 pb-12 md:pb-16 min-h-screen flex flex-col justify-center relative overflow-hidden bg-[color:var(--background)]">
+    <section id="home" className="pt-20 md:pt-24 pb-8 md:pb-10 min-h-screen flex flex-col justify-center relative overflow-hidden bg-[color:var(--background)]">
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="h-full w-full" style={{
           backgroundImage: `linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px)`,
@@ -18,17 +17,8 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="md:w-1/2 order-2 md:order-1"
-          >
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+          <div className="md:w-1/2 order-2 md:order-1">
+            <div>
               <h2 className="font-mono text-xs md:text-sm tracking-widest text-gray-500 dark:text-gray-400 mb-2 md:mb-2">
                 hello! my name is
               </h2>
@@ -37,18 +27,13 @@ const Hero = () => {
                 <span className="block mb-0.5">pem tsering</span>
                 <span className="block mb-2 md:mb-1">gurung</span>
                 <span className="block text-sm sm:text-xl md:text-3xl font-normal md:font-light text-[color:var(--text-light)] mt-0 md:mt-1">
-                  software engineer | full-stack & ai development
+                  software engineer | full-stack &amp; ai development
                 </span>
               </h1>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="mt-4 md:mt-6 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg"
-              >
+              <div className="mt-3 md:mt-4 text-sm sm:text-base text-[color:var(--text-light)] max-w-lg">
                 {/* Condensed mobile bio with better readability */}
-                <p className="mb-5 md:mb-5 leading-relaxed text-gray-600 dark:text-gray-400">
+                <p className="mb-3 md:mb-3 leading-relaxed text-gray-600 dark:text-gray-400">
                   <span className="md:hidden">
                     senior @ college of wooster studying computer science. passionate about building ai agents and full-stack applications that solve real-world problems.
                   </span>
@@ -59,69 +44,54 @@ const Hero = () => {
 
                 {/* Mobile-only CTAs - Optimized for focus and conversion */}
                 <div className="md:hidden mt-6 flex flex-col gap-5">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                  >
+                  <div>
                     <Link
                       to="/projects"
                       className="px-8 py-3.5 rounded-none bg-black text-white font-semibold tracking-wide hover-lift inline-block w-full text-center text-base shadow-xl"
                     >
                       view my work
                     </Link>
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.0, duration: 0.5 }}
-                    className="flex justify-center items-center space-x-10 py-2"
-                  >
-                    <motion.a
+                  <div className="flex justify-center items-center space-x-10 py-2">
+                    <a
                       href="https://github.com/pemtseringgurung"
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.15 }}
-                      whileTap={{ scale: 0.95 }}
                       className="text-gray-600 dark:text-gray-300 hover:text-black p-3 rounded-full hover:bg-gray-100 transition-all duration-200"
                       aria-label="GitHub"
                     >
                       <FiGithub size={28} />
-                    </motion.a>
-                    <motion.a
+                    </a>
+                    <a
                       href="https://www.linkedin.com/in/pemgurung/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.15 }}
-                      whileTap={{ scale: 0.95 }}
                       className="text-gray-600 dark:text-gray-300 hover:text-black p-3 rounded-full hover:bg-gray-100 transition-all duration-200"
                       aria-label="LinkedIn"
                     >
                       <FiLinkedin size={28} />
-                    </motion.a>
-                    <motion.a
+                    </a>
+                    <a
                       href="mailto:pemgurung541@gmail.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.15 }}
-                      whileTap={{ scale: 0.95 }}
                       className="text-gray-600 dark:text-gray-300 hover:text-black p-3 rounded-full hover:bg-gray-100 transition-all duration-200"
                       aria-label="Email"
                     >
                       <FiMail size={28} />
-                    </motion.a>
-                  </motion.div>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Desktop Tech Stack - Original position */}
-                <div className="hidden md:block mb-4 md:mb-6">
-                  <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-[color:var(--text)] inline-block relative">
+                <div className="hidden md:block mb-2 md:mb-3">
+                  <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-[color:var(--text)] inline-block relative">
                     tech stack
                     <span className="absolute w-12 h-0.5 bg-black bottom-[-6px] left-0"></span>
                   </h3>
 
-                  <div className="mt-4 md:mt-5 flex flex-wrap gap-2">
+                  <div className="mt-3 md:mt-3 flex flex-wrap gap-1.5">
                     {['javascript', 'python', 'java', 'c++', 'kotlin', 'typescript', 'react', 'node.js', 'next.js', 'llamaindex', 'model context protocol (mcp)', 'flask', 'django', 'pytorch', 'tensorflow', 'git', 'github', 'jupyter', 'fastapi', 'mongodb', 'postgresql', 'html', 'css', 'aws(ec2, s3, eks)', 'gcp', 'firebase', 'docker', 'kubernetes'].map((tech, i) => (
                       <span key={i} className="px-2 py-1 text-[10px] rounded-full bg-[color:var(--tag-bg)] text-[color:var(--tag-text)] hover:shadow-md transition-shadow duration-200 inline-block">
                         {tech}
@@ -129,69 +99,52 @@ const Hero = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Desktop-only CTAs - Original position */}
-              <div className="hidden md:flex mt-6 md:mt-8 flex-col gap-4 md:gap-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                >
+              <div className="hidden md:flex mt-4 md:mt-5 flex-col gap-3 md:gap-4">
+                <div>
                   <Link
                     to="/projects"
                     className="px-6 md:px-8 py-2.5 md:py-3 rounded-none bg-black text-white font-medium tracking-wider hover-lift inline-block w-fit text-sm md:text-base"
                   >
                     view work
                   </Link>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.5 }}
-                  className="flex space-x-6"
-                >
-                  <motion.a
+                <div className="flex space-x-6">
+                  <a
                     href="https://github.com/pemtseringgurung"
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
                     className="text-gray-700 dark:text-gray-300 hover:bg-[#e5e7eb] hover:text-black p-2 rounded-full transition-colors duration-200"
                   >
                     <FiGithub size={22} />
-                  </motion.a>
-                  <motion.a
+                  </a>
+                  <a
                     href="https://www.linkedin.com/in/pemgurung/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
                     className="text-gray-700 dark:text-gray-300 hover:bg-[#e5e7eb] hover:text-black p-2 rounded-full transition-colors duration-200"
                   >
                     <FiLinkedin size={22} />
-                  </motion.a>
-                  <motion.a
+                  </a>
+                  <a
                     href="mailto:pemgurung541@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
                     className="text-gray-700 dark:text-gray-300 hover:bg-[#e5e7eb] hover:text-black p-2 rounded-full transition-colors duration-200"
                   >
                     <FiMail size={22} />
-                  </motion.a>
-                </motion.div>
+                  </a>
+                </div>
               </div>
 
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-5 md:mb-0"
-          >
-            <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-96 md:h-96">
+          <div className="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-5 md:mb-0">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-80 md:h-80">
               <img
                 srcSet={`${heroImage176} 176w, ${heroImage384} 384w`}
                 sizes="(max-width: 640px) 176px, 384px"
@@ -205,7 +158,7 @@ const Hero = () => {
                 className="w-full h-full object-cover rounded-2xl md:rounded-sm shadow-2xl md:shadow-none"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
